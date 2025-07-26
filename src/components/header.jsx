@@ -1,23 +1,11 @@
-import React from "react";
-
-export default function Header({ openModal }) {
+export default function Header() {
   return (
-    <header className="flex justify-between items-center p-4 bg-white shadow-md">
-      <div className="text-2xl font-bold text-blue-600">Dwel</div>
-      <div className="space-x-4">
-        <button
-          onClick={() => openModal("signin")}
-          className="px-4 py-2 border rounded"
-        >
-          Sign In
-        </button>
-        <button
-          onClick={() => openModal("signup")}
-          className="px-4 py-2 bg-blue-600 text-white rounded"
-        >
-          Sign Up
-        </button>
-      </div>
+    <header className="flex justify-between items-center px-8 py-6">
+      <div className="text-sm font-semibold">DWEL®</div>
+      <nav className="space-x-6 text-sm font-light">
+        <a href="#projects" className="hover:underline">PROJECTS</a>
+        <a href="#info" className="hover:underline">INFO</a>
+      </nav>
     </header>
   );
 }
