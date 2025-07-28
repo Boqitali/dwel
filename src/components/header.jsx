@@ -7,7 +7,6 @@ export default function Header() {
 
   return (
     <>
-      {/* HEADER */}
       <header className="flex justify-between items-center px-8 py-6 bg-white shadow">
         <div className="text-sm font-semibold">DWEL®</div>
         <nav className="space-x-6 text-sm font-light">
@@ -26,11 +25,10 @@ export default function Header() {
         </nav>
       </header>
 
-      {/* MODAL */}
       {openModal && (
         <div className="fixed inset-0 flex justify-center items-center z-50 backdrop-blur-sm bg-black/10">
           <div className="bg-white p-6 rounded-xl w-80 shadow-lg relative">
-            {/* Close (X) Button */}
+            
             <button
               onClick={closeModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-red-500"
@@ -38,12 +36,10 @@ export default function Header() {
               ✕
             </button>
 
-            {/* Title */}
             <h2 className="text-2xl font-semibold mb-4 text-center">
               {openModal === "signin" ? "Sign In" : "Sign Up"}
             </h2>
 
-            {/* FORM */}
             <form className="space-y-4">
               {openModal === "signup" && (
                 <input
@@ -63,7 +59,6 @@ export default function Header() {
                 className="w-full px-3 py-2 border rounded-md"
               />
 
-              {/* Submit + Cancel Buttons */}
               <div className="flex justify-between gap-2">
                 <button
                   type="submit"
@@ -81,7 +76,6 @@ export default function Header() {
               </div>
             </form>
 
-            {/* Switch Link */}
             <p className="text-sm text-center mt-4">
               {openModal === "signin"
                 ? "Don't have an account?"
